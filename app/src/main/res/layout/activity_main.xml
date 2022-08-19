@@ -49,7 +49,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/footer"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:background="@color/black_senai"
@@ -141,7 +141,7 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 

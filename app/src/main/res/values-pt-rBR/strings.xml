@@ -8,4 +8,10 @@
     <string name="your_pass">Sua senha</string>
     <string name="new_user">Cadastrar-se</string>
     <string name="logo_name">SENAI</string>
+    <string name="name_label">Nome</string>
+    <string name="email_label">E-mail</string>
+    <string name="pass_label">Senha</string>
+    <string name="weight_label">Peso</string>
+    <string name="height_label">Altura</string>
+    <string name="register_user">Registrar Usuário</string>
 </resources>
