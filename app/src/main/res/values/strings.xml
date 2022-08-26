@@ -13,4 +13,6 @@
     <string name="weight_label">Weight</string>
     <string name="height_label">Height</string>
     <string name="register_user">Register user</string>
+    <string name="name_user">UserName</string>
+    <string name="calculator_label">Shall we calculate your body mass index now?</string>
 </resources>

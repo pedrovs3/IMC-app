@@ -109,11 +109,11 @@
                 android:text="@string/weight_label"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/editTextNumber2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintStart_toStartOf="@+id/editTextWeight"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -158,7 +158,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/editTextWeight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -169,10 +169,10 @@
                 android:inputType="number"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="12dp"
-                app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+                app:layout_constraintEnd_toStartOf="@+id/editTextHeight"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+                app:layout_constraintStart_toStartOf="@+id/editTextPassword"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <Button
@@ -184,9 +184,9 @@
                 android:background="@drawable/button_background"
                 android:text="@string/register_user"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-                app:layout_constraintStart_toStartOf="@+id/editTextNumber2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+                app:layout_constraintEnd_toEndOf="@+id/editTextHeight"
+                app:layout_constraintStart_toStartOf="@+id/editTextWeight"
+                app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -196,11 +196,11 @@
                 android:text="@string/height_label"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintStart_toStartOf="@+id/editTextHeight"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editTextHeight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -211,9 +211,9 @@
                 android:inputType="numberDecimal"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+                app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editTextNumber2"
+                app:layout_constraintStart_toEndOf="@+id/editTextWeight"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
