@@ -11,14 +11,14 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto"
         android:text="@string/bmi"
         android:textColor="@color/red_senai"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintEnd_toEndOf="@+id/text_view_height"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_height" />
 
     <TextView
         android:id="@+id/textView19"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/text_view_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -47,60 +47,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/text_view_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/your_email"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintStart_toStartOf="@+id/text_view_username"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_username" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/text_view_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/weight_label"
+        android:text="Peso: 64KG"
         android:textColor="@color/white"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_height"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_username"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/text_view_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
+        android:text="Altura: 1.75m"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/height_label"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_email"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_weight"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_weight" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -108,6 +89,8 @@
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -138,40 +121,42 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/calculator_box_background"
-        android:backgroundTint="#59F50057"
-        android:padding="16dp"
+        android:padding="32dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20">
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto"
             android:text="@string/weight_label"
             android:textColor="@color/white"
             android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_weight"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/edit_text_weight"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="32dp"
             android:background="@drawable/edit_background"
             android:ems="10"
             android:inputType="number"
             android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView23"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/textView22"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
@@ -183,11 +168,12 @@
             android:text="@string/height_label"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_height"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_weight"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_weight" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/edit_text_height"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -195,12 +181,14 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+            app:layout_constraintBottom_toTopOf="@+id/button_calculate"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_weight"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/textView23"
             app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -208,7 +196,7 @@
             android:background="@drawable/button_background"
             android:text="@string/calculate"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_height"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_height" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

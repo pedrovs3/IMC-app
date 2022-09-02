@@ -6,7 +6,7 @@
      android:topLeftRadius="16dp"
      android:bottomRightRadius="16dp"
      android:bottomLeftRadius="16dp"/>
-    <solid android:color="@color/red_senai"/>
+    <solid android:color="@color/red_senai_transparent"/>
    </shape>
   </item>
 </selector>

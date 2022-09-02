@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="red_senai">#FFF50057</color>
+    <color name="red_senai_transparent">#7FF50057</color>
     <color name="black_senai">#FF1B1D1E</color>
 </resources>

@@ -14,4 +14,8 @@
     <string name="weight_label">Peso</string>
     <string name="height_label">Altura</string>
     <string name="register_user">Registrar Usuário</string>
+    <string name="name_user">Nome de Usuário</string>
+    <string name="calculator_label">Vamos calcular seu índice de massa corporal?</string>
+    <string name="result_text">Esse é o resultado do seu IMC</string>
+
 </resources>

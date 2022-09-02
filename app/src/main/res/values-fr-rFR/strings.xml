@@ -8,4 +8,12 @@
     <string name="your_pass">Votre mot de passe</string>
     <string name="new_user">S\'inscrire</string>
     <string name="logo_name">SENAI</string>
+    <string name="email_label">E-mail</string>
+    <string name="pass_label">Mot de passe</string>
+    <string name="weight_label">Lester</string>
+    <string name="height_label">Hauteur</string>
+    <string name="register_user">Enregistrer l\'utilisateur</string>
+    <string name="name_user">Nom d\'utilisateur</string>
+    <string name="calculator_label">Allons-nous calculer votre indice de masse corporelle maintenant ?</string>
+    <string name="result_text">This is your BMI result</string>
 </resources>

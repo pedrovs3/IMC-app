@@ -15,4 +15,5 @@
     <string name="register_user">Register user</string>
     <string name="name_user">UserName</string>
     <string name="calculator_label">Shall we calculate your body mass index now?</string>
+    <string name="result_text">This is your BMI result</string>
 </resources>

@@ -32,6 +32,7 @@ class SignupActivity : AppCompatActivity() {
 
         buttonSave.setOnClickListener {
             saveUser()
+
         }
     }
 
@@ -62,6 +63,7 @@ class SignupActivity : AppCompatActivity() {
 
         if(editor.commit()) {
             Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
+            finish()
         } else {
             Toast.makeText(this, "Ocorreu um erro no cadastro.", Toast.LENGTH_SHORT).show()
         }
