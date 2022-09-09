@@ -17,5 +17,11 @@
     <string name="name_user">Nome de Usuário</string>
     <string name="calculator_label">Vamos calcular seu índice de massa corporal?</string>
     <string name="result_text">Esse é o resultado do seu IMC</string>
+    <string name="under_weight">Abaixo do peso.</string>
+    <string name="ideal_weight">Peso ideal.</string>
+    <string name="light_overheight">Levemente acima do peso.</string>
+    <string name="obesity_one">Obesidade grau I.</string>
+    <string name="obesity_two">Obesidade grau II (severa).</string>
+    <string name="obesity_three">Obesidade III (mórbida).</string>
 
 </resources>

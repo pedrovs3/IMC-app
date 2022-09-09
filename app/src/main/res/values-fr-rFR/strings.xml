@@ -16,4 +16,10 @@
     <string name="name_user">Nom d\'utilisateur</string>
     <string name="calculator_label">Allons-nous calculer votre indice de masse corporelle maintenant ?</string>
     <string name="result_text">This is your BMI result</string>
+    <string name="under_weight">Abaixo do peso.</string>
+    <string name="ideal_weight">Peso ideal.</string>
+    <string name="light_overheight">Levemente acima do peso.</string>
+    <string name="obesity_one">Obesidade grau I.</string>
+    <string name="obesity_two">Obesidade grau II (severa).</string>
+    <string name="obesity_three">Obesidade III (mórbida).</string>
 </resources>

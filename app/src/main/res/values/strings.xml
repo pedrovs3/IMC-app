@@ -16,4 +16,10 @@
     <string name="name_user">UserName</string>
     <string name="calculator_label">Shall we calculate your body mass index now?</string>
     <string name="result_text">This is your BMI result</string>
+    <string name="under_weight">Under weight</string>
+    <string name="ideal_weight">Ideal weight</string>
+    <string name="light_overheight">slightly overweight</string>
+    <string name="obesity_one">Grade I obesity</string>
+    <string name="obesity_two">Grade II (severe) obesity.</string>
+    <string name="obesity_three">Obesity III (morbid).</string>
 </resources>
