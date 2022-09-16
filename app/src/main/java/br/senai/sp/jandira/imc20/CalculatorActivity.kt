@@ -3,6 +3,7 @@ package br.senai.sp.jandira.imc20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.constraintlayout.motion.widget.TransitionBuilder.validate
 import br.senai.sp.jandira.imc20.databinding.ActivityCalculatorBinding
 
 class CalculatorActivity : AppCompatActivity() {
@@ -19,13 +20,24 @@ class CalculatorActivity : AppCompatActivity() {
         loadProfile()
 
         binding.buttonCalculate.setOnClickListener {
-            updateData()
-            bmiCalculate()
+            if(validate()) {
+                updateData()
+                bmiCalculate()
+            }
         }
+    }
+
+    private fun validate(): Boolean {
+        if(binding.editTextWeight.text.isEmpty()) {
+            binding.editTextWeight.error = "Valor requirido."
+            return false
+        }
+        return true
     }
 
     private fun bmiCalculate() {
         val openResultActivity = Intent(this, ResultActivity::class.java)
+
         // Enviar dados de uma activity para outra
         openResultActivity.putExtra("weight", binding.editTextWeight.text.toString())
         openResultActivity.putExtra("height", binding.editTextHeight.text.toString())
@@ -47,9 +59,10 @@ class CalculatorActivity : AppCompatActivity() {
         val dados = getSharedPreferences("dados", MODE_PRIVATE)
         val editor = dados.edit()
 
-        if (!binding.editTextHeight.text.isEmpty()){
+        if (!binding.editTextHeight.text.isEmpty()) {
             editor.putFloat("height", binding.editTextHeight.text.toString().toFloat())
         }
+
         editor.putInt("weight", binding.editTextWeight.text.toString().toInt())
 
         editor.apply()
