@@ -5,46 +5,57 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import br.senai.sp.jandira.imc20.databinding.ActivitySignupBinding
 import br.senai.sp.jandira.imc20.model.User
 
 class SignupActivity : AppCompatActivity() {
-
-    lateinit var editName: EditText
-    lateinit var editEmail: EditText
-    lateinit var editPassword: EditText
-    lateinit var editWeight: EditText
-    lateinit var editHeight: EditText
-    lateinit var buttonSave: Button
+    lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Definir conteúdo de visualização
-        setContentView(R.layout.activity_signup)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar!!.hide()
-        // Instância das views
-        editName = findViewById(R.id.editTextName)
-        editEmail = findViewById(R.id.editTextEmail)
-        editPassword = findViewById(R.id.editTextPassword)
-        editWeight = findViewById(R.id.editTextWeight)
-        editHeight = findViewById(R.id.editTextHeight)
-        buttonSave = findViewById(R.id.buttonUserCreate)
 
-        buttonSave.setOnClickListener {
-            saveUser()
-
+        binding.buttonUserCreate.setOnClickListener {
+            if (validate()) {
+                saveUser()
+            }
         }
+    }
+
+    private fun validate():Boolean {
+        if (binding.editTextName.text.isEmpty()) {
+            binding.editTextName.error = "Digite o nome de usuário"
+            return false
+        }else if (binding.editTextEmail.text.isEmpty()) {
+            binding.editTextEmail.error = "Digite o Email de login"
+            return false
+        }else if (binding.editTextPassword.text.isEmpty()) {
+            binding.editTextPassword.error = "Digite uma senha de login"
+            return false
+        }else if (binding.editTextWeight.text.isEmpty()) {
+            binding.editTextWeight.error = "Digite o seu peso"
+            return false
+        }else if (binding.editTextHeight.text.isEmpty()) {
+            binding.editTextHeight.error = "Digite sua altura"
+            return false
+        }
+        return true
     }
 
     private fun saveUser() {
         val user = User()
 
         user.id = 1
-        user.name = editName.text.toString()
-        user.email = editEmail.text.toString()
-        user.password = editPassword.text.toString()
-        user.weight = editWeight.text.toString().toInt()
-        user.height = editHeight.text.toString().toDouble()
+        user.name = binding.editTextName.text.toString()
+        user.email = binding.editTextEmail.text.toString()
+        user.password = binding.editTextPassword.text.toString()
+        user.weight = binding.editTextWeight.text.toString().toInt()
+        user.height = binding.editTextHeight.text.toString().toDouble()
 
         // Gravar usuário no SharedPreferences
         //Step 1 - Obter uma instancia do SharedPreferences
